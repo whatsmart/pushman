@@ -25,6 +25,7 @@ $app->post('/push', function (Request $request, Response $response) {
     $data = [];
 
     $payload = $request->getParsedBody();
+
     if ($payload) {
 
         if (array_key_exists("targets", $payload)) {
@@ -56,17 +57,18 @@ $app->post('/push', function (Request $request, Response $response) {
         if (count($android_deviceids) > 0) {
             if (!$notification) {
                 if ($data) {
+                    var_dump($data);
                     $template = new IGtTransmissionTemplate();
                     $template->set_appId(APPID);
                     $template->set_appkey(APPKEY);
-                    $template->set_transmissionType(1);
+                    $template->set_transmissionType(2);
                     $template->set_transmissionContent(json_encode($data));
 
                     $message = new IGtListMessage();
                     $message->set_isOffline(true);                                      //是否离线
                     if ($options) {
                         if (array_key_exists("expired", $options)) {
-                            $message->set_offlineExpireTime($options["expired"]);       //离线时间
+                            $message->set_offlineExpireTime($options["expired"] * 1000);       //离线时间
                         }
                     }
                     $message->set_data($template);                                      //设置推送消息类型
@@ -80,7 +82,7 @@ $app->post('/push', function (Request $request, Response $response) {
                         $target->set_appId(APPID);
                         $target->set_clientId($deviceid);
                         //$target->set_alias(Alias);
-                         $target_list[] = $target;
+                        $target_list[] = $target;
                     }
 
                     try {
