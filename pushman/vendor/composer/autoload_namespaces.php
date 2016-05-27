@@ -6,5 +6,6 @@ $vendorDir = dirname(dirname(__FILE__));
 $baseDir = dirname($vendorDir);
 
 return array(
+    'jpush' => array($vendorDir . '/jpush/jpush/src'),
     'Pimple' => array($vendorDir . '/pimple/pimple/src'),
 );

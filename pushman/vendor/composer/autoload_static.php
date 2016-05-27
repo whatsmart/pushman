@@ -8,6 +8,7 @@ class ComposerStaticInit9ddca415d3cb08ee23b08d16b0a5c7e2
 {
     public static $files = array (
         '253c157292f75eb38082b5acb06f3f01' => __DIR__ . '/..' . '/nikic/fast-route/src/functions.php',
+        '968b13b9abb3514a5bb0365cd5f391eb' => __DIR__ . '/..' . '/jpush/jpush/src/JPush/JPush.php',
     );
 
     public static $prefixLengthsPsr4 = array (
@@ -49,6 +50,13 @@ class ComposerStaticInit9ddca415d3cb08ee23b08d16b0a5c7e2
     );
 
     public static $prefixesPsr0 = array (
+        'j' => 
+        array (
+            'jpush' => 
+            array (
+                0 => __DIR__ . '/..' . '/jpush/jpush/src',
+            ),
+        ),
         'P' => 
         array (
             'Pimple' => 

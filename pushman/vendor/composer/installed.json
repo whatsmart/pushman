@@ -174,17 +174,17 @@
     },
     {
         "name": "slim/slim",
-        "version": "3.4.1",
-        "version_normalized": "3.4.1.0",
+        "version": "3.4.2",
+        "version_normalized": "3.4.2.0",
         "source": {
             "type": "git",
             "url": "https://github.com/slimphp/Slim.git",
-            "reference": "794073a27b2dd9ef492124263038291b7f8daeb3"
+            "reference": "a132385f736063d00632b52b3f8a389fe66fe4fa"
         },
         "dist": {
             "type": "zip",
-            "url": "https://api.github.com/repos/slimphp/Slim/zipball/794073a27b2dd9ef492124263038291b7f8daeb3",
-            "reference": "794073a27b2dd9ef492124263038291b7f8daeb3",
+            "url": "https://api.github.com/repos/slimphp/Slim/zipball/a132385f736063d00632b52b3f8a389fe66fe4fa",
+            "reference": "a132385f736063d00632b52b3f8a389fe66fe4fa",
             "shasum": ""
         },
         "require": {
@@ -201,7 +201,7 @@
             "phpunit/phpunit": "^4.0",
             "squizlabs/php_codesniffer": "^2.5"
         },
-        "time": "2016-05-16 18:49:10",
+        "time": "2016-05-25 11:23:38",
         "type": "library",
         "installation-source": "dist",
         "autoload": {
@@ -243,5 +243,53 @@
             "micro",
             "router"
         ]
+    },
+    {
+        "name": "jpush/jpush",
+        "version": "v3.3.9",
+        "version_normalized": "3.3.9.0",
+        "source": {
+            "type": "git",
+            "url": "https://github.com/jpush/jpush-api-php-client.git",
+            "reference": "d38d87bd66595473586b38fbb43d097ada75e8e2"
+        },
+        "dist": {
+            "type": "zip",
+            "url": "https://api.github.com/repos/jpush/jpush-api-php-client/zipball/d38d87bd66595473586b38fbb43d097ada75e8e2",
+            "reference": "d38d87bd66595473586b38fbb43d097ada75e8e2",
+            "shasum": ""
+        },
+        "require": {
+            "ext-curl": "*",
+            "php": ">=5.1"
+        },
+        "require-dev": {
+            "phpunit/phpunit": "*"
+        },
+        "time": "2016-04-07 02:58:00",
+        "type": "library",
+        "installation-source": "dist",
+        "autoload": {
+            "psr-0": {
+                "jpush": "src/"
+            },
+            "files": [
+                "src/JPush/JPush.php"
+            ]
+        },
+        "notification-url": "https://packagist.org/downloads/",
+        "license": [
+            "Apache"
+        ],
+        "authors": [
+            {
+                "name": "JPush",
+                "email": "support@jpush.cn",
+                "homepage": "https://www.jpush.cn/",
+                "role": "Developer"
+            }
+        ],
+        "description": "JPush API PHP Client",
+        "homepage": "http://docs.jpush.cn/display/dev/Push-API-v3"
     }
 ]

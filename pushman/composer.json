@@ -1,5 +1,6 @@
 {
     "require": {
-        "slim/slim": "^3.0"
+        "slim/slim": "^3.0",
+        "jpush/jpush": "v3.3.9"
     }
 }
